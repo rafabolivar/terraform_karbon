@@ -1,0 +1,5 @@
+cluster_name = "CLUNAME"
+subnet_name  = "Primary"
+user         = "admin"
+password     = "PASSWD"
+endpoint     = "PCIPADDR"
