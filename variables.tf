@@ -5,11 +5,17 @@ variable "subnet_name" {
   type = string
 }
 variable "password" {
-  type      = string
+  type = string
 }
 variable "endpoint" {
   type = string
 }
 variable "user" {
+  type = string
+}
+variable "cluuid" {
+  type = string
+}
+variable "netuuid" {
   type = string
 }
