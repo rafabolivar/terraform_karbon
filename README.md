@@ -17,7 +17,7 @@ We need to know the following data about our environment:
 
 # Deployment
 
-Once you clone this GitHub repository, you have to import the blueprint located in the [blueprints](https://github.com/rafabolivar/terraform_karbon/tree/main/blueprints) folder, into your Calm environment. This can be easily done by clicking on the ***Blueprints*** icon on the left bar and selecting ***Upload Blueprint***.
+Once you clone this GitHub repository, you have to import the blueprint located in the [blueprints](https://github.com/rafabolivar/terraform_karbon/tree/main/blueprints) folder, into your Calm environment. This can be easily done by clicking on the ***Blueprints*** icon on the left bar and selecting ***Upload Blueprint***. If you're asked for a password, use nutanix/4u.
 
 Then you have to click the ***Launch*** button on the upper right side and change your Prism Central Password, Prism Central  and Prism Element IP Addresses. Then click ***Deploy***, and in a few minutes the Terraform Workstation will be up and running.
 
