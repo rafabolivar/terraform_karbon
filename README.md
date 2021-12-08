@@ -20,3 +20,46 @@ We need to know the following data about our environment:
 Once you clone this GitHub repository, you have to import the blueprint located in the [blueprints](https://github.com/rafabolivar/terraform_karbon/tree/main/blueprints) folder, into your Calm environment. This can be easily done by clicking on the ***Blueprints*** icon on the left bar and selecting ***Upload Blueprint***.
 
 Then you have to click the ***Launch*** button on the upper right side and change your Prism Central Password, Prism Central  and Prism Element IP Addresses. Then click ***Deploy***, and in a few minutes the Terraform Workstation will be up and running.
+
+# Using Terraform to deploy a new K8s Cluster
+
+## Login in the Terraform Workstation
+
+Once the deployment is finished, you can login in the Terraform Workstation via SSH using the following credentials:
+
+ - User: ubuntu
+ - Password: nutanix/4u
+
+## Karbon cluster deployment files
+
+Inside the path `/home/ubuntu/terraform` you'll find the following 3 files:
+
+|File|Description  |
+|--|--|
+|[main.tf](https://github.com/rafabolivar/terraform_karbon/blob/main/main.tf)  | The main configuration file for our deployment |
+|[variables.tf](https://github.com/rafabolivar/terraform_karbon/blob/main/variables.tf)|The variable definition file|
+|[terraform.tfvars](https://github.com/rafabolivar/terraform_karbon/blob/main/terraform.tfvars)  | The variable values that will be used in our deployment |
+
+The variables values are autopopulated by Calm, using the appropiate values from our cluster.
+
+**Important Note:** The network name used for this deployment is Primary. This value can be easily changed in the blueprint to match your requirements.
+
+## Deploying the cluster
+
+Once you have checked the content of the files, you can proceed deploying the Karbon Cluster. First you'll need to initialise the environment:
+
+    ubuntu@ubuntu:~$ cd /home/ubuntu/terraform
+    ubuntu@ubuntu:~/terraform$ ./terraform init
+    
+Then, you can check the plan for your deployment:
+
+    ubuntu@ubuntu:~/terraform$ ./terraform plan
+If you want to modify the files, later you can validate that they're correct:
+
+    ubuntu@ubuntu:~/terraform$ ./terraform validate
+
+Finally, you can launch your deployment:
+
+    ubuntu@ubuntu:~/terraform$ ./terraform apply
+
+Once you execute this command, you can check in Prism Central that a new Karbon Cluster is being deployed. By default, the name of the cluster will be ***rafak8s[UNIX_date]***. This can be easily modified editing the Terraform configuration files.
