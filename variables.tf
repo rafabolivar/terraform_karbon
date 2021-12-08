@@ -19,3 +19,6 @@ variable "cluuid" {
 variable "netuuid" {
   type = string
 }
+variable "k8sclu_name" {
+  type = string
+}
