@@ -14,8 +14,8 @@ provider "nutanix" {
   insecure = true
 }
 
-resource "nutanix_karbon_cluster" "exclu2" {
-  name       = "exclu2"
+resource "nutanix_karbon_cluster" "k8scluster" {
+  name       = var.k8sclu_name
   version    = "1.20.9-0"
   storage_class_config {
     reclaim_policy = "Delete"
