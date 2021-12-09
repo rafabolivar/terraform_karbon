@@ -63,3 +63,11 @@ Finally, you can launch your deployment:
     ubuntu@ubuntu:~/terraform$ ./terraform apply
 
 Once you execute this command, you can check in Prism Central that a new Karbon Cluster is being deployed. By default, the name of the cluster will be ***rafak8s[UNIX_date]***. This can be easily modified editing the Terraform configuration files.
+
+# Useful links
+
+Here you have several links that can be useful to understand this example:
+[Nutanix Terraform Provider example usage](https://registry.terraform.io/providers/nutanix/nutanix/latest/docs/resources/karbon_cluster).
+[Nutanix Terraform Provider on GitHub](https://github.com/nutanix/terraform-provider-nutanix).
+[Nutanix Terraform Provider documentation and examples on nutanix.dev](https://www.nutanix.dev/2021/04/20/using-the-nutanix-terraform-provider/).
+[Aristocrat-B2B examples on GitHub](https://github.com/Aristocrat-B2B/terraform-nutanix-karbon).
