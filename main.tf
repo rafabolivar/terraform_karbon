@@ -35,7 +35,7 @@ resource "nutanix_karbon_cluster" "k8scluster" {
   }
   worker_node_pool {
     node_os_version = "ntnx-1.1"
-    num_instances   = 1
+    num_instances   = 3
     ahv_config {
       network_uuid               = var.netuuid
       prism_element_cluster_uuid = var.cluuid
