@@ -16,7 +16,7 @@ provider "nutanix" {
 
 resource "nutanix_karbon_cluster" "k8scluster" {
   name       = var.k8sclu_name
-  version    = "1.20.9-0"
+  version    = "1.20.9-1"
   storage_class_config {
     reclaim_policy = "Delete"
     volumes_config {
